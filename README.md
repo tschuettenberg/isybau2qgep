@@ -4,7 +4,7 @@ Instructions on using the (german specific) wastewater data format ["ISYBAU Aust
 
 Anleitung für die Verwendung der [ISYBAU Austauschformate Abwasser (XML)](http://www.arbeitshilfen-abwasser.de/html/A7ISYBAU_ATF_XML.html) in [QGIS](https://qgis.org) sowie in Verbindung mit der QGIS-basierten Abwasserfachschale [QGEP](https://github.com/QGEP/QGEP).
 
-## Ziel A: Einfache Anzeige und Nutzung von ISYBAU XML in QGIS
+## 1. Einfache Anzeige und Nutzung von ISYBAU XML in QGIS
 * Verwendung des **[OGR Treibers GMLAS](http://www.gdal.org/drv_gmlas.html)** (GDAL >= 2.2) 
 * bzw. der [GML Application Schema toolbox](https://github.com/BRGM/gml_application_schema_toolbox)
 * [x] [ISYBAU Schema](/isybau_schema.md) referenzieren
@@ -15,5 +15,5 @@ Anleitung für die Verwendung der [ISYBAU Austauschformate Abwasser (XML)](http:
   * Objekte ("Abwassertechnische Anlage" etc.) bilden
 * [ ] ggf. QGIS Projektdatei und Layerstile erstellen
 
-## Ziel B: Migration ins QGEP Schema
+## 2. Migration ins QGEP Schema
 ToDo
