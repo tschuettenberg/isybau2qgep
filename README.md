@@ -8,7 +8,7 @@ Anleitung für die Verwendung der [ISYBAU Austauschformate Abwasser (XML)](http:
 * Verwendung des **[OGR Treibers GMLAS](http://www.gdal.org/drv_gmlas.html)** (GDAL >= 2.2) 
 * bzw. der [GML Application Schema toolbox](https://github.com/BRGM/gml_application_schema_toolbox)
 * [x] [ISYBAU Schema](/isybau_schema.md) referenzieren
-* [ ] einlesen: `ogrinfo`
+* [ ] [einlesen:](/ogrinfo_GMLAS.md) `ogrinfo`
 * [ ] importieren: `ogr2ogr`
 * [ ] mittels SQL
   * Geometrien erzeugen und 
