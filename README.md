@@ -10,5 +10,8 @@ Anleitung für die Verwendung der [ISYBAU Austauschformate Abwasser (XML)](http:
 1. [ISYBAU Schema](isybau2qgep/isybau_schema.md) referenzieren
 2. einlesen: `ogrinfo`
 3. importieren: `ogr2ogr`
+4. mittels SQL
+   1. Geometrien erzeugen und 
+   2. Objekte ("Abwassertechnische Anlage" etc.) bilden
 
 ## Ziel B: Migration ins QGEP Schema
