@@ -1,1 +1,0 @@
-ISYBAU XML verfügt zwar über Schemas [Download: http://www.arbeitshilfen-abwasser.de/html/Materialien.1.32.html](http://www.arbeitshilfen-abwasser.de/html/Materialien.1.32.html), diese sind jedoch nicht online abrufbar, sondern nur lokal nutzbar.
