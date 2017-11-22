@@ -7,7 +7,7 @@ Anleitung für die Verwendung der [ISYBAU Austauschformate Abwasser (XML)](http:
 ## Ziel A: Einfache Anzeige und Nutzung von ISYBAU XML in QGIS
 * Verwendung des **[OGR Treibers GMLAS](http://www.gdal.org/drv_gmlas.html)** (GDAL >= 2.2) 
 * bzw. der [GML Application Schema toolbox](http://planet.qgis.org/plugins/gml_application_schema_toolbox/)
-1. [ISYBAU Schema](isybau2qgep/isybau_schema.md) referenzieren
+1. [ISYBAU Schema](/isybau_schema.md) referenzieren
 2. einlesen: `ogrinfo`
 3. importieren: `ogr2ogr`
 4. mittels SQL
