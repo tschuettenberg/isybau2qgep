@@ -17,7 +17,7 @@ Damit das funktioniert, muss im einzulesenden XML-Dokumemt auf das Schema verwie
 Oder man spezifiziert die Schemadatei mit der GMLAS [Open Option](http://www.gdal.org/drv_gmlas.html#open_options) `XSD=filename`, wenn man den Treiber in OGR verwendet:
 
 ```
-$ ogrinfo GMLAS:[...]\ISYBAU_XML-2013-Stammdaten_Sanierung_Abnahme.xml -oo XSD=[...]\1302-metadaten.xsd
+$ ogrinfo -ro GMLAS:[...]\ISYBAU_XML-2013-Stammdaten_Sanierung_Abnahme.xml -oo XSD=[...]\1302-metadaten.xsd
 ```
 
 **Der Verweis auf das Schema des Metadaten-Bereiches `1302-metadaten.xsd` ist ausreichend, da in diesem alle weiteren Schema eingebunden werden.**
