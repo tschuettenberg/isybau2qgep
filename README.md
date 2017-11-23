@@ -6,6 +6,6 @@ For descriptions and backgrund see the [Wiki!](https://github.com/tschuettenberg
 
 ***
 
-Anleitung für die Verwendung der [ISYBAU Austauschformate Abwasser (XML)](http://www.arbeitshilfen-abwasser.de/html/A7ISYBAU_ATF_XML.html) in [QGIS](https://qgis.org) sowie in Verbindung mit der QGIS-basierten Abwasserfachschale [QGEP](https://github.com/QGEP/QGEP).
+[Anleitung](https://github.com/tschuettenberg/isybau2qgep/wiki) für die Verwendung der [ISYBAU Austauschformate Abwasser (XML)](http://www.arbeitshilfen-abwasser.de/html/A7ISYBAU_ATF_XML.html) in [QGIS](https://qgis.org) sowie in Verbindung mit der QGIS-basierten Abwasserfachschale [QGEP](https://github.com/QGEP/QGEP).
 
 Erläuterungen und Hintergrund im [Wiki!](https://github.com/tschuettenberg/isybau2qgep/wiki)
