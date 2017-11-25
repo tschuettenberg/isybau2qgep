@@ -1,5 +1,5 @@
 --Knoten: Bildung von Flächengeometrien
-CREATE OR REPLACE VIEW isy_in.v_objektgeometrien_f AS 
+CREATE OR REPLACE VIEW isy_in.v_flaechengeometrien AS 
  SELECT ( SELECT p_1.parent_ogr_pkid
            FROM isy_in.ident_daten_stammd_abwassanlage_geomet_geomet_polygo_polygon p_1
           WHERE pk.parent_ogr_pkid::text = p_1.ogr_pkid::text) AS parent_ogr_pkid,
