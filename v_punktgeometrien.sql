@@ -1,5 +1,5 @@
 --Knoten: Bildung der Punktgeometrien, Achtung: nicht deckungsgleich mit Abwassertechnischen Anlagen, mehrer Punkte pro Anlage (SMP, DMP, etc.) möglich!
-CREATE OR REPLACE VIEW isy_in.v_objektgeometrien_p AS 
+CREATE OR REPLACE VIEW isy_in.v_punktgeometrien AS 
  SELECT kp.ogc_fid, kp.ogr_pkid, kp.parent_ogr_pkid,
     kp.rechtswert, kp.hochwert, kp.punkthoehe,
     kp.punktattributabwasser,
