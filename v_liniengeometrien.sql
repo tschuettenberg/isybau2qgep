@@ -1,5 +1,5 @@
 --Kanten: Bildung der einfachen Liniengeometrien (Strecken)
-CREATE OR REPLACE VIEW isy_in.v_objektgeometrien_l AS 
+CREATE OR REPLACE VIEW isy_in.v_liniengeometrien AS 
  SELECT kk.parent_ogr_pkid,
     ST_SetSRID(ST_MakeLine(ST_MakePoint(kk.start_rechtswert, kk.start_hochwert), ST_MakePoint(kk.ende_rechtswert, kk.ende_hochwert)), 25832)::geometry(LineString,25832) AS l_geom_2d
    FROM isy_in.identi_datenk_stammd_abwassanlage_geomet_geomet_kanten_kante kk
