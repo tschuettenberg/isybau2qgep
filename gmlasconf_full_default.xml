@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--derived from gmlasconf.xsd with default values. starting point for isybau tests-->
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 			xsi:noNamespaceSchemaLocation="gmlasconf.xsd">
+
+	<AllowRemoteSchemaDownload>true</AllowRemoteSchemaDownload>
+	<SchemaCache enabled="true">
+		<Directory></Directory>
+	</SchemaCache>
+
+	<SchemaAnalysisOptions>
+		<SchemaFullChecking>true</SchemaFullChecking>
+		<HandleMultipleImports>false</HandleMultipleImports>
+	</SchemaAnalysisOptions>
+
+	<Validation enabled="false">
+		<FailIfError>false</FailIfError>
+	</Validation>
+	<ExposeMetadataLayers>false</ExposeMetadataLayers>
+
+	<LayerBuildingRules>
+		<AlwaysGenerateOGRId>false</AlwaysGenerateOGRId>
+		<RemoveUnusedLayers>false</RemoveUnusedLayers>
+		<RemoveUnusedFields>false</RemoveUnusedFields>
+		<UseArrays>true</UseArrays>
+		<UseNullState>false</UseNullState>
+
+		<GML>
+			<IncludeGeometryXML>false</IncludeGeometryXML>
+			<InstantiateGMLFeaturesOnly>true</InstantiateGMLFeaturesOnly>
+		</GML>
+
+		<!-- 60 for PostgreSQL compatiblity. The maximum is 64 but reserve some space so that the spatial index name can be formed -->
+		<IdentifierMaxLength>60</IdentifierMaxLength>
+		<CaseInsensitiveIdentifier>true</CaseInsensitiveIdentifier>
+		<PostgreSQLIdentifierLaundering>true</PostgreSQLIdentifierLaundering>
+		
+		<FlatteningRules>
+			<MaximumNumberOfFields>10</MaximumNumberOfFields>
+			<Namespaces>
+				<Namespace prefix="String" uri="String"/>
+			</Namespaces>
+			<ForceFlatteningXPath>String</ForceFlatteningXPath>
+			<DisableFlatteningXPath>String</DisableFlatteningXPath>
+		</FlatteningRules>
+
+		<SWEProcessing>
+			<Activation>false</Activation>
+			<ProcessDataRecord>true</ProcessDataRecord>
+			<ProcessDataArray>true</ProcessDataArray>
+		</SWEProcessing>
+
+	</LayerBuildingRules>
+
+	<TypingConstraints>
+		<Namespaces>
+			<Namespace prefix="String" uri="String"/>
+		</Namespaces>
+
+		<ChildConstraint>
+			<ContainerXPath>String</ContainerXPath>
+			<ChildrenElements>
+				<Element>String</Element>
+			</ChildrenElements>
+		</ChildConstraint>
+	</TypingConstraints>
+
+	<XLinkResolution>
+		<Timeout>10</Timeout>
+		<MaxGlobalResolutionTime>none</MaxGlobalResolutionTime>
+		<MaxFileSize>1048576</MaxFileSize>
+		<ProxyServerPort>none</ProxyServerPort>
+		<ProxyUserPassword>none</ProxyUserPassword>
+		<ProxyAuth>none</ProxyAuth>
+		<CacheDirectory></CacheDirectory>
+		<DefaultResolution enabled="false">
+			<AllowRemoteDownload>true</AllowRemoteDownload>
+			<ResolutionMode>RawContent</ResolutionMode>
+			<ResolutionDepth>1</ResolutionDepth>
+			<CacheResults>false</CacheResults>
+		</DefaultResolution>
+
+		<URLSpecificResolution>
+			<URLPrefix></URLPrefix>
+			<HTTPHeader>
+				<Name></Name>
+				<Value></Value>
+			</HTTPHeader>
+			<AllowRemoteDownload>true</AllowRemoteDownload>
+			<ResolutionMode>RawContent</ResolutionMode>
+			<ResolutionDepth>1</ResolutionDepth>
+			<CacheResults>false</CacheResults>
+			<Field>
+				<Name>field_name</Name>
+				<Type>string</Type>
+				<XPath></XPath>
+			</Field>
+		</URLSpecificResolution>
+
+	</XLinkResolution>
+
+	<IgnoredXPaths>
+		<WarnIfIgnoredXPathFoundInDocInstance>true</WarnIfIgnoredXPathFoundInDocInstance>
+		<Namespaces>
+			<Namespace prefix="String" uri="String"/>
+		</Namespaces>
+		<XPath warnIfIgnoredXPathFoundInDocInstance="true">String</XPath>
+	</IgnoredXPaths>
+
+	<WriterConfig>
+		<IndentationSize>2</IndentationSize>
+		<Comment>comment</Comment>
+		<LineFormat>NATIVE</LineFormat>
+		<SRSNameFormat>OGC_URL</SRSNameFormat>
+		<Wrapping>WFS2_FEATURECOLLECTION</Wrapping>
+		<Timestamp>2017-11-11T11:11:00Z</Timestamp>
+		<WFS20SchemaLocation>http://schemas.opengis.net/wfs/2.0/wfs.xsd</WFS20SchemaLocation>
+	</WriterConfig>
+
+</Configuration>
