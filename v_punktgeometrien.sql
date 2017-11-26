@@ -4,5 +4,5 @@ CREATE OR REPLACE VIEW isy_in.v_punktgeometrien AS
     kp.rechtswert, kp.hochwert, kp.punkthoehe,
     kp.punktattributabwasser,
     kp.lagegenauigkeitsstufe, kp.hoehengenauigkeitsstufe,
-    ST_SetSRID(ST_MakePoint(kp.rechtswert, kp.hochwert), 25832)::geometry(Point,25832) AS p_geom_2d
+    ST_SetSRID(ST_MakePoint(kp.rechtswert, kp.hochwert), 4647)::geometry(Point,4647) AS p_geom_2d
    FROM isy_in.identi_datenk_stammd_abwassanlage_geomet_geomet_knoten_punkt kp;
