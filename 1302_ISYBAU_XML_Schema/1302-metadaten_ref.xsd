@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- XML-Schema für ISYBAU-Austauschformat Datenbereich Metadaten -->
+<!-- XML-Schema fÃ¼r ISYBAU-Austauschformat Datenbereich Metadaten -->
 <!-- 06.02.2014, Korrektur des IdentityConstraints "ZObjektRef", xsd:selector xpath-->
-<!-- 16.07.2015, redaktionelle Änderung der Feldlänge des Elements "Liegenschaftsbezeichnung",  maxLength value="255" -->
+<!-- 16.07.2015, redaktionelle Ã„nderung der FeldlÃ¤nge des Elements "Liegenschaftsbezeichnung",  maxLength value="255" -->
 <!-- Formatversion 2013-02 -->
 <!-- Stand 12/2015 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ofd-hannover.la/Identifikation" xmlns:isy="http://www.ofd-hannover.la/Identifikation" xmlns:isy2="http://www.ofd-hannover.la/Identifikation2" targetNamespace="http://www.ofd-hannover.la/Identifikation" elementFormDefault="qualified">
