@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
-<Identifikation xmlns="http://www.ofd-hannover.la/Identifikation">
+<Identifikation xmlns="http://www.ofd-hannover.la/Identifikation"
+                <!--ErgÃ¤nzung-->
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                xsi:schemaLocation="http://www.ofd-hannover.la/Identifikation ../1302_ISYBAU_XML_Schema/1302-metadaten.xsd">
   <Version>2013-02</Version>
   <Admindaten>
     <Liegenschaft>
@@ -24,7 +27,7 @@
   <Datenkollektive>
     <Datenstatus>1</Datenstatus>
     <Erstellungsdatum>2017-09-04</Erstellungsdatum>
-    <Kommentar>ISYBAU XML-2013 Beispieldatensatz mit Sanierungsmaßnahmen, Abnahmeinspektionen, Dichtheitsprüfung</Kommentar>
+    <Kommentar>ISYBAU XML-2013 Beispieldatensatz mit SanierungsmaÃŸnahmen, Abnahmeinspektionen, DichtheitsprÃ¼fung</Kommentar>
     <Kennungen>
       <Kollektiv>
         <Kennung>STA01</Kennung>
@@ -54,7 +57,7 @@
         </Kollektiveigenschaft>
         <Regelwerk>5</Regelwerk>
         <Bearbeitungsstand>2014-03-26</Bearbeitungsstand>
-        <Kommentar>Inspektionsdaten zu Auftrag: Beispieldaten Abnahme Sanierung; Dichtheitsprüfung zu Auftrag: Dichtheitsprüfung Abnahme Sanierung</Kommentar>
+        <Kommentar>Inspektionsdaten zu Auftrag: Beispieldaten Abnahme Sanierung; DichtheitsprÃ¼fung zu Auftrag: DichtheitsprÃ¼fung Abnahme Sanierung</Kommentar>
       </Kollektiv>
     </Kennungen>
     <Stammdatenkollektiv>
@@ -9687,7 +9690,7 @@
         <Objektart>2</Objektart>
         <Status>0</Status>
         <Entwaesserungsart>KS</Entwaesserungsart>
-        <Kommentar>Übergabe an öffentl. Kanalisation</Kommentar>
+        <Kommentar>Ãœbergabe an Ã¶ffentl. Kanalisation</Kommentar>
         <Knoten>
           <KnotenTyp>0</KnotenTyp>
           <Schacht>
@@ -17294,7 +17297,7 @@
               <MaterialVerbund2>EP</MaterialVerbund2>
               <Materialstaerke>3</Materialstaerke>
               <Belastung>SLW60</Belastung>
-              <ChemBestaendigkeit>chemisch beständig</ChemBestaendigkeit>
+              <ChemBestaendigkeit>chemisch bestÃ¤ndig</ChemBestaendigkeit>
               <Ringsteifigkeit>0.025</Ringsteifigkeit>
               <BiegeEModul>10000.0</BiegeEModul>
               <Biegefestigkeit>320.0</Biegefestigkeit>
@@ -17312,7 +17315,7 @@
             <Verfahrensbezeichnung>ROB</Verfahrensbezeichnung>
             <Sanierungsumfang>5</Sanierungsumfang>
             <Dichtheitspruefung>0</Dichtheitspruefung>
-            <Kommentar>Zulauföffnung mit Roboter hergestellt; ohne Einbindung an die Auskleidung</Kommentar>
+            <Kommentar>ZulaufÃ¶ffnung mit Roboter hergestellt; ohne Einbindung an die Auskleidung</Kommentar>
             <Lagedaten>
               <StationierungAnfang>7.70</StationierungAnfang>
               <StationierungEnde>7.70</StationierungEnde>
@@ -17330,7 +17333,7 @@
             <Verfahrensbezeichnung>ROB</Verfahrensbezeichnung>
             <Sanierungsumfang>5</Sanierungsumfang>
             <Dichtheitspruefung>0</Dichtheitspruefung>
-            <Kommentar>Zulauföffnung mit Roboter hergestellt; ohne Einbindung an die Auskleidung</Kommentar>
+            <Kommentar>ZulaufÃ¶ffnung mit Roboter hergestellt; ohne Einbindung an die Auskleidung</Kommentar>
             <Lagedaten>
               <StationierungAnfang>27.20</StationierungAnfang>
               <StationierungEnde>27.20</StationierungEnde>
@@ -17348,7 +17351,7 @@
             <Verfahrensbezeichnung>ROB</Verfahrensbezeichnung>
             <Sanierungsumfang>5</Sanierungsumfang>
             <Dichtheitspruefung>0</Dichtheitspruefung>
-            <Kommentar>Zulauföffnung mit Roboter hergestellt; ohne Einbindung an die Auskleidung</Kommentar>
+            <Kommentar>ZulaufÃ¶ffnung mit Roboter hergestellt; ohne Einbindung an die Auskleidung</Kommentar>
             <Lagedaten>
               <StationierungAnfang>40.50</StationierungAnfang>
               <StationierungEnde>40.50</StationierungEnde>
@@ -17912,7 +17915,7 @@
             <MaterialKennwerte>
               <MaterialPrimaer>PEHD</MaterialPrimaer>
               <Belastung>SLW60</Belastung>
-              <ChemBestaendigkeit>chem. Beständig</ChemBestaendigkeit>
+              <ChemBestaendigkeit>chem. BestÃ¤ndig</ChemBestaendigkeit>
               <Wasserdurchlaessigkeit>2</Wasserdurchlaessigkeit>
             </MaterialKennwerte>
           </Massnahme>
@@ -18010,7 +18013,7 @@
             <MaterialKennwerte>
               <MaterialPrimaer>PEHD</MaterialPrimaer>
               <Belastung>SLW60</Belastung>
-              <ChemBestaendigkeit>chem. Beständig</ChemBestaendigkeit>
+              <ChemBestaendigkeit>chem. BestÃ¤ndig</ChemBestaendigkeit>
               <Wasserdurchlaessigkeit>2</Wasserdurchlaessigkeit>
             </MaterialKennwerte>
           </Massnahme>
@@ -19424,7 +19427,7 @@
               <Dokumentationsrichtung>O</Dokumentationsrichtung>
               <PositionVon>12</PositionVon>
               <PositionBis>12</PositionBis>
-              <Kommentar>Hier ergänzende Angabe zur Lage</Kommentar>
+              <Kommentar>Hier ergÃ¤nzende Angabe zur Lage</Kommentar>
             </Lagedaten>
             <MaterialKennwerte>
               <MaterialPrimaer>STZ</MaterialPrimaer>
@@ -19432,7 +19435,7 @@
               <MaterialVerbund2>EP</MaterialVerbund2>
               <Materialstaerke>3</Materialstaerke>
               <Belastung>SLW60</Belastung>
-              <ChemBestaendigkeit>chemisch beständig</ChemBestaendigkeit>
+              <ChemBestaendigkeit>chemisch bestÃ¤ndig</ChemBestaendigkeit>
               <Ringsteifigkeit>0.023</Ringsteifigkeit>
               <BiegeEModul>10300.0</BiegeEModul>
               <Biegefestigkeit>325.0</Biegefestigkeit>
@@ -19529,7 +19532,7 @@
               <Dokumentationsrichtung>O</Dokumentationsrichtung>
               <PositionVon>12</PositionVon>
               <PositionBis>12</PositionBis>
-              <Kommentar>Hier ergänzende Angabe zur Lage</Kommentar>
+              <Kommentar>Hier ergÃ¤nzende Angabe zur Lage</Kommentar>
             </Lagedaten>
             <MaterialKennwerte>
               <MaterialPrimaer>STZ</MaterialPrimaer>
@@ -19537,7 +19540,7 @@
               <MaterialVerbund2>EP</MaterialVerbund2>
               <Materialstaerke>3</Materialstaerke>
               <Belastung>SLW60</Belastung>
-              <ChemBestaendigkeit>chemisch beständig</ChemBestaendigkeit>
+              <ChemBestaendigkeit>chemisch bestÃ¤ndig</ChemBestaendigkeit>
               <Ringsteifigkeit>0.023</Ringsteifigkeit>
               <BiegeEModul>10300.0</BiegeEModul>
               <Biegefestigkeit>325.0</Biegefestigkeit>
@@ -19626,14 +19629,14 @@
             <Bauwerksteil>Z</Bauwerksteil>
             <Profilkennziffer_Bauteilform>0</Profilkennziffer_Bauteilform>
             <Dichtheitspruefung>0</Dichtheitspruefung>
-            <Kommentar>Wurzelentfernung mit Kanalfräsroboter</Kommentar>
+            <Kommentar>Wurzelentfernung mit KanalfrÃ¤sroboter</Kommentar>
             <Lagedaten>
               <StationierungAnfang>7.00</StationierungAnfang>
               <StationierungEnde>7.00</StationierungEnde>
               <Dokumentationsrichtung>O</Dokumentationsrichtung>
               <PositionVon>8</PositionVon>
               <PositionBis>10</PositionBis>
-              <Kommentar>Hier ergänzende Angabe zur Lage</Kommentar>
+              <Kommentar>Hier ergÃ¤nzende Angabe zur Lage</Kommentar>
             </Lagedaten>
             <MaterialKennwerte>
               <MaterialPrimaer>AZ</MaterialPrimaer>
@@ -19650,7 +19653,7 @@
             <Sanierungsumfang>5</Sanierungsumfang>
             <Bauwerksteil>Z</Bauwerksteil>
             <Dichtheitspruefung>0</Dichtheitspruefung>
-            <Kommentar>Wurzelentfernung mit Kanalfräsroboter</Kommentar>
+            <Kommentar>Wurzelentfernung mit KanalfrÃ¤sroboter</Kommentar>
             <Lagedaten>
               <StationierungAnfang>13.70</StationierungAnfang>
               <StationierungEnde>13.70</StationierungEnde>
@@ -19673,7 +19676,7 @@
             <Sanierungsumfang>5</Sanierungsumfang>
             <Bauwerksteil>Z</Bauwerksteil>
             <Dichtheitspruefung>0</Dichtheitspruefung>
-            <Kommentar>Wurzelentfernung mit Kanalfräsroboter</Kommentar>
+            <Kommentar>Wurzelentfernung mit KanalfrÃ¤sroboter</Kommentar>
             <Lagedaten>
               <StationierungAnfang>20.50</StationierungAnfang>
               <StationierungEnde>20.50</StationierungEnde>
@@ -22476,7 +22479,7 @@
     </Stammdatenkollektiv>
     <Zustandsdatenkollektiv>
       <Kennung>ZUS01</Kennung>
-      <Beschreibung>ISYBAU XML-2013 Zustandsdaten gemäß DIN-EN 13508-2:2011 / Nationale Festlegung Arbeitshilfen
+      <Beschreibung>ISYBAU XML-2013 Zustandsdaten gemÃ¤ÃŸ DIN-EN 13508-2:2011 / Nationale Festlegung Arbeitshilfen
 Abwass</Beschreibung>
       <Auftraege>
         <Auftrag>
@@ -22494,7 +22497,7 @@ Abwass</Beschreibung>
           <InspektionsdatumEnde>2013-03-31</InspektionsdatumEnde>
         </Auftrag>
         <Auftrag>
-          <Auftragsbezeichnung>Dichtheitsprüfung Abnahme Sanierung</Auftragsbezeichnung>
+          <Auftragsbezeichnung>DichtheitsprÃ¼fung Abnahme Sanierung</Auftragsbezeichnung>
           <Auftragsnummer>789</Auftragsnummer>
           <Auftragskennung>20</Auftragskennung>
           <Auftragsdatum>2013-03-02</Auftragsdatum>
@@ -22569,7 +22572,7 @@ Abwass</Beschreibung>
                 <Schachtbereich>I</Schachtbereich>
                 <PositionVon>12</PositionVon>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Maßnahme SAN1: Wiederherstellung Anschluss Ablaufseite</Kommentar>
+                <Kommentar>MaÃŸnahme SAN1: Wiederherstellung Anschluss Ablaufseite</Kommentar>
               </KZustand>
               <KZustand>
                 <VertikaleLage>1.96</VertikaleLage>
@@ -22666,7 +22669,7 @@ Abwass</Beschreibung>
                 <Schachtbereich>J</Schachtbereich>
                 <PositionVon>12</PositionVon>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Maßnahme SAN1: Erneuerung der Schachtsohle mit Kanalklinkern</Kommentar>
+                <Kommentar>MaÃŸnahme SAN1: Erneuerung der Schachtsohle mit Kanalklinkern</Kommentar>
               </KZustand>
               <KZustand>
                 <VertikaleLage>0.20</VertikaleLage>
@@ -22676,7 +22679,7 @@ Abwass</Beschreibung>
                 <Schachtbereich>I</Schachtbereich>
                 <PositionVon>06</PositionVon>
                 <BezeichnungSanierung>SAN2</BezeichnungSanierung>
-                <Kommentar>Maßnahme SAN2: Wiederherstellung Anschluss Zulaufseite</Kommentar>
+                <Kommentar>MaÃŸnahme SAN2: Wiederherstellung Anschluss Zulaufseite</Kommentar>
               </KZustand>
               <KZustand>
                 <VertikaleLage>0.20</VertikaleLage>
@@ -22686,7 +22689,7 @@ Abwass</Beschreibung>
                 <Schachtbereich>I</Schachtbereich>
                 <PositionVon>12</PositionVon>
                 <BezeichnungSanierung>SAN3</BezeichnungSanierung>
-                <Kommentar>Maßnahme SAN3: Wiederherstellung Anschluss Ablaufseite</Kommentar>
+                <Kommentar>MaÃŸnahme SAN3: Wiederherstellung Anschluss Ablaufseite</Kommentar>
               </KZustand>
               <KZustand>
                 <VertikaleLage>2.19</VertikaleLage>
@@ -22784,7 +22787,7 @@ Abwass</Beschreibung>
                 <PositionVon>12</PositionVon>
                 <PositionBis>12</PositionBis>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Maßnahme SAN1: Auskleidung der Sohle mit GFK-Formteilen</Kommentar>
+                <Kommentar>MaÃŸnahme SAN1: Auskleidung der Sohle mit GFK-Formteilen</Kommentar>
               </KZustand>
               <KZustand>
                 <VertikaleLage>1.64</VertikaleLage>
@@ -22904,7 +22907,7 @@ Abwass</Beschreibung>
                 <Schachtbereich>C</Schachtbereich>
                 <PositionVon>10</PositionVon>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Maßnahme SAN1: Abdichtung von Undichtigkeiten an Schachtinnenwand</Kommentar>
+                <Kommentar>MaÃŸnahme SAN1: Abdichtung von Undichtigkeiten an Schachtinnenwand</Kommentar>
               </KZustand>
               <KZustand>
                 <VertikaleLage>2.12</VertikaleLage>
@@ -23047,7 +23050,7 @@ Abwass</Beschreibung>
                 <Schachtbereich>I</Schachtbereich>
                 <PositionVon>04</PositionVon>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Maßnahme SAN1: Wiederherstellung Anschluss Zulaufseite</Kommentar>
+                <Kommentar>MaÃŸnahme SAN1: Wiederherstellung Anschluss Zulaufseite</Kommentar>
               </KZustand>
               <KZustand>
                 <VertikaleLage>2.16</VertikaleLage>
@@ -23214,7 +23217,7 @@ Abwass</Beschreibung>
                 <Verbindung>0</Verbindung>
                 <PositionVon>09</PositionVon>
                 <BezeichnungSanierung>SAN2</BezeichnungSanierung>
-                <Kommentar>Zulauf an Inliner geöffnet</Kommentar>
+                <Kommentar>Zulauf an Inliner geÃ¶ffnet</Kommentar>
               </RZustand>
               <RZustand>
                 <Station>27.20</Station>
@@ -23234,7 +23237,7 @@ Abwass</Beschreibung>
                 <Verbindung>0</Verbindung>
                 <PositionVon>09</PositionVon>
                 <BezeichnungSanierung>SAN3</BezeichnungSanierung>
-                <Kommentar>Zulauf an Inliner geöffnet</Kommentar>
+                <Kommentar>Zulauf an Inliner geÃ¶ffnet</Kommentar>
               </RZustand>
               <RZustand>
                 <Station>40.50</Station>
@@ -23254,7 +23257,7 @@ Abwass</Beschreibung>
                 <Verbindung>0</Verbindung>
                 <PositionVon>09</PositionVon>
                 <BezeichnungSanierung>SAN4</BezeichnungSanierung>
-                <Kommentar>Zulauf an Inliner geöffnet</Kommentar>
+                <Kommentar>Zulauf an Inliner geÃ¶ffnet</Kommentar>
               </RZustand>
               <RZustand>
                 <Station>44.60</Station>
@@ -23355,7 +23358,7 @@ Abwass</Beschreibung>
                 <InspektionsKode>BCD</InspektionsKode>
                 <Charakterisierung1>XP</Charakterisierung1>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Anfang Maßnahme SAN1, Berstlining</Kommentar>
+                <Kommentar>Anfang MaÃŸnahme SAN1, Berstlining</Kommentar>
               </RZustand>
               <RZustand>
                 <Station>17.79</Station>
@@ -23363,7 +23366,7 @@ Abwass</Beschreibung>
                 <InspektionsKode>BCE</InspektionsKode>
                 <Charakterisierung1>XP</Charakterisierung1>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Ende Maßnahme SAN1, Berstlining</Kommentar>
+                <Kommentar>Ende MaÃŸnahme SAN1, Berstlining</Kommentar>
               </RZustand>
             </Inspektionsdaten>
           </Rohrleitung>
@@ -23417,7 +23420,7 @@ Abwass</Beschreibung>
                 <InspektionsKode>BCD</InspektionsKode>
                 <Charakterisierung1>XP</Charakterisierung1>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Anfang Maßnahme SAN1, Berstlining</Kommentar>
+                <Kommentar>Anfang MaÃŸnahme SAN1, Berstlining</Kommentar>
               </RZustand>
               <RZustand>
                 <Station>20.36</Station>
@@ -23425,7 +23428,7 @@ Abwass</Beschreibung>
                 <InspektionsKode>BCE</InspektionsKode>
                 <Charakterisierung1>XP</Charakterisierung1>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Ende Maßnahme SAN1, Berstlining</Kommentar>
+                <Kommentar>Ende MaÃŸnahme SAN1, Berstlining</Kommentar>
               </RZustand>
             </Inspektionsdaten>
           </Rohrleitung>
@@ -23479,7 +23482,7 @@ Abwass</Beschreibung>
                 <InspektionsKode>BCD</InspektionsKode>
                 <Charakterisierung1>XP</Charakterisierung1>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Anfang Maßnahme SAN1, GFK-Liner</Kommentar>
+                <Kommentar>Anfang MaÃŸnahme SAN1, GFK-Liner</Kommentar>
               </RZustand>
               <RZustand>
                 <Station>34.90</Station>
@@ -23487,7 +23490,7 @@ Abwass</Beschreibung>
                 <InspektionsKode>BCE</InspektionsKode>
                 <Charakterisierung1>XP</Charakterisierung1>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Ende Maßnahme SAN1, GFK-Liner</Kommentar>
+                <Kommentar>Ende MaÃŸnahme SAN1, GFK-Liner</Kommentar>
               </RZustand>
             </Inspektionsdaten>
           </Rohrleitung>
@@ -23541,7 +23544,7 @@ Abwass</Beschreibung>
                 <InspektionsKode>BCD</InspektionsKode>
                 <Charakterisierung1>XP</Charakterisierung1>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Anfang Maßnahme SAN1, GFK-Liner</Kommentar>
+                <Kommentar>Anfang MaÃŸnahme SAN1, GFK-Liner</Kommentar>
               </RZustand>
               <RZustand>
                 <Station>18.50</Station>
@@ -23549,7 +23552,7 @@ Abwass</Beschreibung>
                 <InspektionsKode>BCE</InspektionsKode>
                 <Charakterisierung1>XP</Charakterisierung1>
                 <BezeichnungSanierung>SAN1</BezeichnungSanierung>
-                <Kommentar>Ende Maßnahme SAN1, GFK-Liner</Kommentar>
+                <Kommentar>Ende MaÃŸnahme SAN1, GFK-Liner</Kommentar>
               </RZustand>
             </Inspektionsdaten>
           </Rohrleitung>
