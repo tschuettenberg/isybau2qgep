@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
 <Identifikation xmlns="http://www.ofd-hannover.la/Identifikation"
-                <!--Ergänzung-->
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
                 xsi:schemaLocation="http://www.ofd-hannover.la/Identifikation ../1302_ISYBAU_XML_Schema/1302-metadaten.xsd">
   <Version>2013-02</Version>
