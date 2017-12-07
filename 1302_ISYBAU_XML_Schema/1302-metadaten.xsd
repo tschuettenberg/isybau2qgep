@@ -7,7 +7,7 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ofd-hannover.la/Identifikation" xmlns:isy="http://www.ofd-hannover.la/Identifikation" xmlns:isy2="http://www.ofd-hannover.la/Identifikation2" targetNamespace="http://www.ofd-hannover.la/Identifikation" elementFormDefault="qualified">
 	<xsd:include schemaLocation=".\1302-stammdaten.xsd"/>
 	<xsd:include schemaLocation=".\1302-zustandsdaten.xsd"/>
-	<!--<xsd:include schemaLocation=".\1302-referenzlisten.xsd"/>--><!--RuntimeError: C:/Users/TS/Downloads/isybau2qgep-master/1302_ISYBAU_XML_Beispieldaten\../1302_ISYBAU_XML_Schema\.\1302-referenzlisten.xsd:7056:48 global type 'simpleType:EinheitZielgroesseType' declared more than once or also declared as complexType-->
+	<xsd:include schemaLocation=".\1302-referenzlisten.xsd"/>
 	<xsd:include schemaLocation=".\1302-hydraulikdaten.xsd"/>
 	<xsd:include schemaLocation=".\1302-betriebsdaten.xsd"/>
 	<xsd:annotation>
