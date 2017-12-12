@@ -1,6 +1,7 @@
 /*
 KNOTEN
-Abwassertechnische Anlagen gem. Arbeitshilfen Abwasser (http://www.arbeitshilfen-abwasser.de/html/ISYBAU_Austauschformate_Abwasser.14.08.html)
+Abwassertechnische Anlagen gem. Arbeitshilfen Abwasser 
+(http://www.arbeitshilfen-abwasser.de/html/ISYBAU_Austauschformate_Abwasser.14.08.html)
 Schächte (S), Anschlusspunkte (AP) und Bauwerke (BW)
 */
 
@@ -8,7 +9,7 @@ Schächte (S), Anschlusspunkte (AP) und Bauwerke (BW)
 --CREATE SCHEMA isybau;
 
 -- S punktförmige Schächte repräsentiert durch den Schachtmittelpunkt 
-CREATE OR REPLACE VIEW isybau.v_knoten_schacht_smp AS 
+CREATE OR REPLACE VIEW qgisybau.v_knoten_schacht_smp AS 
  SELECT a.ogc_fid,
     a.ogr_pkid,
     a.parent_ogr_pkid,
@@ -86,17 +87,17 @@ CREATE OR REPLACE VIEW isybau.v_knoten_schacht_smp AS
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     JOIN isybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 -- G100 2=Knoten
     AND a.knoten_knotentyp = 0 -- G300 0=Schacht
     AND a.geometrie_geoobjekttyp::text = 'P'::text -- V200 P=Punktobjekt
     AND p.punktattributabwasser::text = 'SMP'::text; -- V106: PunktattributAbwasser=SMP
 
-comment on view isybau.v_knoten_schacht_smp is 'punktförmige Schächte repräsentiert durch den Schachtmittelpunkt';
+COMMENT ON view qgisybau.v_knoten_schacht_smp IS 'punktförmige Schächte repräsentiert durch den Schachtmittelpunkt';
 
 -- AP Anschlusspunkte: verschiedene Punkte, Anfangs- und/oder Endpunkte von Leitungen, vgl. V106.
-CREATE OR REPLACE VIEW isybau.v_knoten_ap AS 
+CREATE OR REPLACE VIEW qgisybau.v_knoten_ap AS 
  SELECT a.ogc_fid,
     a.ogr_pkid,
     a.parent_ogr_pkid,
@@ -136,17 +137,17 @@ CREATE OR REPLACE VIEW isybau.v_knoten_ap AS
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     JOIN isybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 -- G100 2=Knoten
     AND a.knoten_knotentyp = 1 -- G300 1=Anschlusspunkt
     AND a.geometrie_geoobjekttyp::text = 'P'::text -- V200 P=Punktobjekt
     AND p.punktattributabwasser::text <> 'GOK'::text; -- evt. "Höhenpunkt Geländeoberkante" (GOK) ausschließen, da nicht Teil der Anlagen!
 
-comment on view isybau.v_knoten_ap is 'Anschlusspunkte: verschiedene Punkte, Anfangs- und/oder Endpunkte von Leitungen, vgl. V106.';
+COMMENT ON view isybau.v_knoten_ap IS 'Anschlusspunkte: verschiedene Punkte, Anfangs- und/oder Endpunkte von Leitungen, vgl. V106.';
 
 -- BW Bauwerke punktförmig: alle Typen, hier keine Differenzierung nach Bauwerkstyp G400
-CREATE OR REPLACE VIEW isybau.v_knoten_bauwerke AS 
+CREATE OR REPLACE VIEW qgisybau.v_knoten_bauwerke AS 
  SELECT a.ogc_fid,
     a.ogr_pkid,
     a.parent_ogr_pkid,
@@ -379,19 +380,19 @@ CREATE OR REPLACE VIEW isybau.v_knoten_bauwerke AS
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     LEFT JOIN isy_in.ident_daten_stamm_abwasanlag_knote_bauwe_behan_anlage_anlage b ON a.ogr_pkid::text = b.parent_ogr_pkid::text
-     LEFT JOIN isybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     LEFT JOIN isybau.ident_daten_stamm_abwasanlag_knote_bauwe_behan_anlage_anlage b ON a.ogr_pkid::text = b.parent_ogr_pkid::text
+     LEFT JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 -- G100 2=Knoten
     AND a.knoten_knotentyp = 2 -- G300 2=Bauwerk
     AND a.geometrie_geoobjekttyp::text = 'P'::text -- V200 P=Punktobjekt
     AND (p.punktattributabwasser::text <> ALL (ARRAY['SBD'::character varying::text, 'DMP'::character varying::text])); -- "Deckel/Einstieg Sonderbauwerk" und "Deckelmittelpunkte" ausschließen! (s.u.) 
 
-comment on view isybau.v_knoten_bauwerke is 'Bauwerke punktförmig: alle Typen, hier keine Differenzierung nach Bauwerkstyp G400';
+COMMENT ON view isybau.v_knoten_bauwerke IS 'Bauwerke punktförmig: alle Typen, hier keine Differenzierung nach Bauwerkstyp G400';
 
 /* optionale Erweiterung */
 -- Deckel/Abdeckung: alle Arten von Deckeln und Einstiegs-Abdeckungen. Kein Objekt im ISYBAU Modell aber hilfreich für Kartendarstellung und notwendig zur Vermeidung von Multipart-/Geometrycollection-Objekten.
-CREATE OR REPLACE VIEW isybau.v_deckel AS 
+CREATE OR REPLACE VIEW qgisybau.v_deckel AS 
 -- Schachtabdeckung 1:1
  SELECT a.ogc_fid,
     a.ogr_pkid,
@@ -443,8 +444,8 @@ CREATE OR REPLACE VIEW isybau.v_deckel AS
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     LEFT JOIN isybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     LEFT JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 
     AND a.knoten_knotentyp = 0 
     AND a.geometrie_geoobjekttyp::text = 'P'::text 
@@ -501,8 +502,8 @@ UNION ALL
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     LEFT JOIN isybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     LEFT JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 
     AND a.knoten_knotentyp = 2 
     AND a.geometrie_geoobjekttyp::text = 'P'::text 
@@ -560,9 +561,9 @@ UNION ALL
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     RIGHT JOIN isy_in.ident_datenk_stammd_abwassanlage_knoten_bauwer_becken_deckel d ON a.ogr_pkid::text = d.parent_ogr_pkid::text -- Becken
-     LEFT JOIN isybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     RIGHT JOIN isybau.ident_datenk_stammd_abwassanlage_knoten_bauwer_becken_deckel d ON a.ogr_pkid::text = d.parent_ogr_pkid::text -- Becken
+     LEFT JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 
     AND a.knoten_knotentyp = 2 
     AND a.geometrie_geoobjekttyp::text = 'P'::text 
@@ -619,9 +620,9 @@ UNION ALL
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     RIGHT JOIN isy_in.ident_datenk_stammd_abwassanlage_knoten_bauwer_pumpwe_deckel d ON a.ogr_pkid::text = d.parent_ogr_pkid::text -- Pumpwerk
-     LEFT JOIN isybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     RIGHT JOIN isybau.ident_datenk_stammd_abwassanlage_knoten_bauwer_pumpwe_deckel d ON a.ogr_pkid::text = d.parent_ogr_pkid::text -- Pumpwerk
+     LEFT JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 
     AND a.knoten_knotentyp = 2 
     and a.geometrie_geoobjekttyp::text = 'P'::text 
@@ -678,9 +679,9 @@ UNION ALL
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     RIGHT JOIN isy_in.ident_datenk_stammd_abwassanlage_knoten_bauwer_zister_deckel d ON a.ogr_pkid::text = d.parent_ogr_pkid::text -- Zisterne
-     LEFT JOIN isybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     RIGHT JOIN isybau.ident_datenk_stammd_abwassanlage_knoten_bauwer_zister_deckel d ON a.ogr_pkid::text = d.parent_ogr_pkid::text -- Zisterne
+     LEFT JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 
     AND a.knoten_knotentyp = 2 
     and a.geometrie_geoobjekttyp::text = 'P'::text 
@@ -737,13 +738,13 @@ UNION ALL
     p.punktattributabwasser,
     a.sanierung_artmassnahme,
     p.p_geom_2d AS geom
-   FROM isy_in.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
-     RIGHT JOIN isy_in.iden_date_stam_abwaanla_knote_bauwe_behan_anlag_anlag_deckel d ON a.ogr_pkid::text = d.parent_ogr_pkid::text -- Behandlungsanlage
-     LEFT JOIN isy_in.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
+   FROM isybau.identifikati_datenkollekti_stammdatenkol_abwassertechnanlage a
+     RIGHT JOIN isybau.iden_date_stam_abwaanla_knote_bauwe_behan_anlag_anlag_deckel d ON a.ogr_pkid::text = d.parent_ogr_pkid::text -- Behandlungsanlage
+     LEFT JOIN qgisybau.v_punktgeometrien p ON a.ogr_pkid::text = p.parent_ogr_pkid::text
   WHERE a.objektart = 2 
     AND a.knoten_knotentyp = 2 
     and a.geometrie_geoobjekttyp::text = 'P'::text 
     AND (p.punktattributabwasser::text = ANY (ARRAY['SBD'::character varying::text, 'DMP'::character varying::text]));
 
-comment on VIEW isybau.v_deckel is 'Deckel/Abdeckung: alle Arten von Deckeln und Einstiegs-Abdeckungen. Kein Objekt im ISYBAU Modell aber hilfreich für Kartendarstellung und notwendig zur Vermeidung von Multipart-/GeometryCollection-Objekten. Schachtabdeckung 1:1, Abdeckung von Versickerungsanlagen 1:1, Für die Bauwerkstypen Pumpwerk, Becken, Behandlungsanlage und Zisterne können jeweils 1:n Deckel dokumentiert sein.';
+COMMENT ON VIEW isybau.v_deckel IS 'Deckel/Abdeckung: alle Arten von Deckeln und Einstiegs-Abdeckungen. Kein Objekt im ISYBAU Modell aber hilfreich für Kartendarstellung und notwendig zur Vermeidung von Multipart-/GeometryCollection-Objekten. Schachtabdeckung 1:1, Abdeckung von Versickerungsanlagen 1:1, Für die Bauwerkstypen Pumpwerk, Becken, Behandlungsanlage und Zisterne können jeweils 1:n Deckel dokumentiert sein.';
 
