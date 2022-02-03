@@ -10,4 +10,4 @@ _For descriptions and backgrund please see the [Wiki!](https://github.com/tschue
 
 _Erläuterungen und Hintergrund im [Wiki!](https://github.com/tschuettenberg/isybau2qgep/wiki)_
 
-_Hinweis: Die Fortschreibung der Arbeitshilfen Abwasser zum ISYBAU-Austauschformat Abwasser (**XML-2017**) umfasste auch Strukturänderungen, so dass die [Objektbildungen](https://github.com/tschuettenberg/isybau2qgep/wiki/Abwassertechnische-Anlagen) nicht mehr funktionieren könnten!_
+_Hinweis: Die Fortschreibung der Arbeitshilfen Abwasser zum ISYBAU-Austauschformat Abwasser (**XML-2017**) umfasste auch Strukturänderungen, so dass die [Objektbildung](https://github.com/tschuettenberg/isybau2qgep/wiki/Abwassertechnische-Anlagen) aus XML-2017-Daten fehlerhaft sein könnte!_
