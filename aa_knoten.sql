@@ -144,7 +144,6 @@ CREATE OR REPLACE VIEW qgisybau.v_knoten_ap AS
     AND a.geometrie_geoobjekttyp::text = 'P'::text -- V200 P=Punktobjekt
     AND p.punktattributabwasser::text <> 'GOK'::text; -- evt. "Höhenpunkt Geländeoberkante" (GOK) ausschließen, da nicht Teil der Anlagen!
 
-COMMENT ON view isybau.v_knoten_ap IS 'Anschlusspunkte: verschiedene Punkte, Anfangs- und/oder Endpunkte von Leitungen, vgl. V106.';
 COMMENT ON view qgisybau.v_knoten_ap IS 'Anschlusspunkte: verschiedene Punkte, Anfangs- und/oder Endpunkte von Leitungen, vgl. V106.';
 
 -- BW Bauwerke punktförmig: alle Typen, hier keine Differenzierung nach Bauwerkstyp G400
