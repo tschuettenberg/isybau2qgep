@@ -144,7 +144,7 @@ CREATE OR REPLACE VIEW qgisybau.v_knoten_ap AS
     AND a.geometrie_geoobjekttyp::text = 'P'::text -- V200 P=Punktobjekt
     AND p.punktattributabwasser::text <> 'GOK'::text; -- evt. "Höhenpunkt Geländeoberkante" (GOK) ausschließen, da nicht Teil der Anlagen!
 
-COMMENT ON view isybau.v_knoten_ap IS 'Anschlusspunkte: verschiedene Punkte, Anfangs- und/oder Endpunkte von Leitungen, vgl. V106.';
+COMMENT ON view qgisybau.v_knoten_ap IS 'Anschlusspunkte: verschiedene Punkte, Anfangs- und/oder Endpunkte von Leitungen, vgl. V106.';
 
 -- BW Bauwerke punktförmig: alle Typen, hier keine Differenzierung nach Bauwerkstyp G400
 CREATE OR REPLACE VIEW qgisybau.v_knoten_bauwerke AS 
@@ -388,7 +388,7 @@ CREATE OR REPLACE VIEW qgisybau.v_knoten_bauwerke AS
     AND a.geometrie_geoobjekttyp::text = 'P'::text -- V200 P=Punktobjekt
     AND (p.punktattributabwasser::text <> ALL (ARRAY['SBD'::character varying::text, 'DMP'::character varying::text])); -- "Deckel/Einstieg Sonderbauwerk" und "Deckelmittelpunkte" ausschließen! (s.u.) 
 
-COMMENT ON view isybau.v_knoten_bauwerke IS 'Bauwerke punktförmig: alle Typen, hier keine Differenzierung nach Bauwerkstyp G400';
+COMMENT ON view qgisybau.v_knoten_bauwerke IS 'Bauwerke punktförmig: alle Typen, hier keine Differenzierung nach Bauwerkstyp G400';
 
 /* optionale Erweiterung */
 -- Deckel/Abdeckung: alle Arten von Deckeln und Einstiegs-Abdeckungen. Kein Objekt im ISYBAU Modell aber hilfreich für Kartendarstellung und notwendig zur Vermeidung von Multipart-/Geometrycollection-Objekten.
@@ -746,5 +746,5 @@ UNION ALL
     and a.geometrie_geoobjekttyp::text = 'P'::text 
     AND (p.punktattributabwasser::text = ANY (ARRAY['SBD'::character varying::text, 'DMP'::character varying::text]));
 
-COMMENT ON VIEW isybau.v_deckel IS 'Deckel/Abdeckung: alle Arten von Deckeln und Einstiegs-Abdeckungen. Kein Objekt im ISYBAU Modell aber hilfreich für Kartendarstellung und notwendig zur Vermeidung von Multipart-/GeometryCollection-Objekten. Schachtabdeckung 1:1, Abdeckung von Versickerungsanlagen 1:1, Für die Bauwerkstypen Pumpwerk, Becken, Behandlungsanlage und Zisterne können jeweils 1:n Deckel dokumentiert sein.';
+COMMENT ON VIEW qgisybau.v_deckel IS 'Deckel/Abdeckung: alle Arten von Deckeln und Einstiegs-Abdeckungen. Kein Objekt im ISYBAU Modell aber hilfreich für Kartendarstellung und notwendig zur Vermeidung von Multipart-/GeometryCollection-Objekten. Schachtabdeckung 1:1, Abdeckung von Versickerungsanlagen 1:1, Für die Bauwerkstypen Pumpwerk, Becken, Behandlungsanlage und Zisterne können jeweils 1:n Deckel dokumentiert sein.';
 
